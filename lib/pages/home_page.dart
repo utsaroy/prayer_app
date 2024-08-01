@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(20),
                                         color: const Color.fromRGBO(
-                                            64, 15, 103, 1),
+                                            64, 15, 103, 1.0),
                                       ),
                                       child: const SizedBox(
                                         height: 30,
