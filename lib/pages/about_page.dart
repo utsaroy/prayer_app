@@ -170,14 +170,14 @@ class AboutPage extends StatelessWidget {
                           ],
                           shape: const HexagonShapeBorder(usePadding: false),
                           color: const Color.fromARGB(255, 137, 137, 137)
-                              .withOpacity(0.4)),
+                              .withOpacity(0.5)),
                       child: Center(
                         child: Image.asset(
-                          "assets/images/flutter_logo.png",
-                          height: 100,
-                          width: 100,
-                          cacheHeight: 120,
-                          cacheWidth: 120,
+                          "assets/images/logo.png",
+                          height: 120,
+                          width: 120,
+                          cacheHeight: 200,
+                          cacheWidth: 200,
                         ),
                       ),
                     ),
@@ -195,6 +195,35 @@ class AboutPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                Positioned(
+                  top: 10,
+                  right: 15,
+                  child: GestureDetector(
+                    onTap: () {
+                      const url = "https://github.com/utsaroy/prayer_app";
+                      launchSocialMediaAppIfInstalled(url: url);
+                    },
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                color: Color.fromARGB(255, 18, 143, 201),
+                                spreadRadius: 5,
+                                blurRadius: 5)
+                          ],
+                          shape: BoxShape.circle,
+                          color: Color.fromARGB(255, 213, 213, 213),
+                          border: Border.fromBorderSide(BorderSide(
+                              color: Color.fromARGB(120, 94, 161, 215),
+                              width: 2))),
+                      child: LottieBuilder.asset(
+                        "assets/animations/github.json",
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                  ),
+                )
               ],
             ),
           ),
@@ -280,7 +309,7 @@ class AboutPage extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      "assets/images/logo.png",
+                      "assets/images/flutter_logo.png",
                       height: 120,
                       width: 120,
                       cacheHeight: 150,
